@@ -1,0 +1,9 @@
+nginxone:
+  build: nginxone
+  ports:
+  - "80:80"
+  volumes_from:
+  - ipy
+  volumes:
+  - ../notebooks/:/notebooks/
+  - nginxone/etc/nginx/:/etc/nginx/
