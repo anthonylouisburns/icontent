@@ -1,0 +1,13 @@
+#sideleft {
+    float: left;
+    width: 15%;
+    min-height: 100%;
+    text-align: left;
+}
+#main
+{
+    float: right;
+    text-align: left;
+    width: 70%;
+    margin-right: 15%;
+}

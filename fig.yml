@@ -1,0 +1,18 @@
+ipy:
+  build: scipyserver
+  ports:
+  - "8080:8080"
+  volumes:
+  - notebooks/:/notebooks/
+converted:
+  build: icontent_convert
+  volumes_from:
+  - ipy
+nginxone:
+  build: nginxone
+  ports:
+  - "80:80"
+  volumes_from:
+  - ipy
+  volumes:
+  - nginxone/etc/nginx/:/etc/nginx/

@@ -1,0 +1,9 @@
+<div id="sideleft">
+    <h1>Sidebar ------------------------------------</h1>
+    <p>The values of const1 is {{ resources.const1 }}.</p>
+    {% for link in resources.links -%}
+    <p id="{{ link.2 }}">
+        <a href="{{ link.1 }}">{{ link.0 }}  </a>
+    </p>
+    {% endfor %}
+</div>
