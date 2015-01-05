@@ -1,5 +1,5 @@
 nginxone:
-  build: nginxone
+  build: .
   ports:
   - "80:80"
   volumes:
