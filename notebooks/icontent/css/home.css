@@ -1,0 +1,23 @@
+#sideleft {
+    float: left;
+    width: 15%;
+    min-height: 100%;
+    text-align: left;
+    padding:30px;
+}
+#main
+{
+    float: right;
+    text-align: left;
+    width: 70%;
+    margin-right: 15%;
+}
+#pad0
+{
+    padding: 10px;
+}
+#pad1
+{
+    text-indent: 20px;
+
+}

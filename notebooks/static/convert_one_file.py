@@ -9,7 +9,7 @@ def convert_one(notebook):
     subprocess.call(script, shell=True, cwd=r'/notebooks/static')
 
     html = notebook.replace(".ipynb", ".html").replace("/notebooks/", "/notebooks/static/")
-    html_dest = html.replace("/notebooks/static/", "/notebooks/html/")
+    html_dest = html.replace("/notebooks/static/", "/notebooks/icontent/")
 
     if not os.path.exists(os.path.dirname(html_dest)):
         os.makedirs(os.path.dirname(html_dest))
