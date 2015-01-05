@@ -4,4 +4,4 @@ nginxone:
   - "80:80"
   volumes:
   - ../notebooks/:/notebooks/
-  - nginxone/etc/nginx/:/etc/nginx/
+  - etc/nginx/:/etc/nginx/
