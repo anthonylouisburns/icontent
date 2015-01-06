@@ -74,7 +74,7 @@ Whenever any files in the notebooks directory are changed, /notebooks/static/get
 https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/convert_one_file.py is then applied to each changed Notebook.
 
 #IContent Configuration
-By default the values are used
+By default the values are as follows
 
 - https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/icontent.tpl - default [Jinja](http://jinja.pocoo.org/) template
 - https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/sideleft.html - default sidebar
