@@ -21,7 +21,7 @@ The Docker services are intended to be launched and orchestrated using [fig](htt
 2. icontent_convert
   - watches notebook directory and runs NBConvert on altered notebooks, generating HTML documents (other document types are possible  
 3. nginxone
-  - serves static files at [http://localhost:80]
+  - serves static files at http://localhost:80
 4. dev-tools
 5. notebooks
   - shared data and generate IPython Notebooks, and generated documents
@@ -43,4 +43,4 @@ Launch nginx
 $cd icontent/nginxone
 $fig up
 ```
-This is simply running a webserver that serves up the previously generated static content. It is currently configured to serve content at [http://localhost/icontent/]. This can be easily replaced with a different web server. The generated files are by default static html.
+This is simply running a webserver that serves up the previously generated static content. It is currently configured to serve content at http://localhost/icontent/. This can be easily replaced with a different web server. The generated files are by default static html.
