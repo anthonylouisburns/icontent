@@ -54,7 +54,7 @@ $fig up
 
 In addition to the nginx server at local host this runs a IPython Notebook server at port 8080
 
-The unique functionality is icontent_convert service. This service runs the script at https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/inotifyUpdate.sh
+The unique functionality is in icontent_convert service. This service runs the script at https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/inotifyUpdate.sh
 ```bash
 #!/bin/bash
 
