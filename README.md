@@ -13,6 +13,7 @@ The core functionality is provide by [NBConvert](https://github.com/ipython/ipyt
 The Project consists of three core Docker services, (icontent_convert, nginxone and scipyserver) and one docker service (dev-tools) which can be used as an environment for testing and developing IContent functionality. Additionally the notebooks directory holds IPython notebooks and generate documents, as well as scripts and data.
 
 The Docker services are intended to be launched and orchestrated using fig.
+
 1. scipyserver
 2. icontent_convert
 3. nginxone
