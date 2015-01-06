@@ -43,4 +43,4 @@ Launch nginx
 $cd icontent/nginxone
 $fig up
 ```
-
+This is simply running a webserver that serves up the previously generated static content. It is currently configured to serve content at [http://localhost/icontent/]. This can be easily replaced with a different web server. The generated files are by default static html.
