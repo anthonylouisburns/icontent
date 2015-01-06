@@ -12,7 +12,7 @@ The core functionality is provide by [NBConvert](https://github.com/ipython/ipyt
 ###Checkout
 The Project consists of three core Docker services, (icontent_convert, nginxone and scipyserver) and one docker service (dev-tools) which can be used as an environment for testing and developing IContent functionality. Additionally the notebooks directory holds IPython notebooks and generated documents, as well as scripts and data.
 
-The Docker services are intended to be launched and orchestrated using fig. Fig is a prerequisite for running this application as intended. The included Vagrant file includes fig and Docker.
+The Docker services are intended to be launched and orchestrated using [fig](http://www.fig.sh/). [Fig](http://www.fig.sh/) is a prerequisite for running this application as intended. The included [Vagrant](https://www.vagrantup.com/) file includes fig and [Docker](https://www.docker.com/).
 
 1. scipyserver
   - host an IPython notebook at [http://localhost:8080]
