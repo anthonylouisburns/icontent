@@ -5,7 +5,7 @@ The functionality largely reproduces what is possible with [NBViewer](http://nbv
 
 IContent is most directly derived from [ipython/docker-notebook](https://github.com/ipython/docker-notebook)
 
-IContent's functionality is modeled after static content generation frameworks like [Hugo](http://gohugo.io/), adn inspired by the entire IPython community particularly those using IPython for blogging.
+IContent's functionality is modeled after static content generation frameworks like [Hugo](http://gohugo.io/), and inspired by the entire IPython community particularly those using IPython for blogging.
 
 The core functionality is provide by [NBConvert](https://github.com/ipython/ipython/tree/master/IPython/nbconvert).
 
