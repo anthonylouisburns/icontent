@@ -54,4 +54,17 @@ $fig up
 
 In addition to the nginx server at local host this runs a IPython Notebook server at port 8080
 
-The unique functionality is icontent_convert service
+The unique functionality is icontent_convert service. This service runs the script at https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/inotifyUpdate.sh
+```bash
+#!/bin/bash
+
+while true #run indefinitely
+do
+inotifywait -e modify,attrib,close_write,move,create,delete /notebooks
+echo "run"
+ipython /notebooks/static/getAltered.py
+echo "move"
+ipython /notebooks/static/moveFiles.py
+sleep 1
+done
+```
