@@ -7,7 +7,7 @@ IContent is most directly derived from [ipython/docker-notebook](https://github.
 
 IContent's functionality is modeled after static content generation frameworks like [Hugo](http://gohugo.io/), and inspired by the entire IPython community particularly those using IPython for blogging.
 
-The core functionality is provide by [NBConvert](https://github.com/ipython/ipython/tree/master/IPython/nbconvert).
+The core functionality is provide by [NBConvert](https://github.com/ipython/ipython/tree/master/IPython/nbconvert). IContent is a simple composition of a handful of individual [Docker](https://www.docker.com/) services, coordinated using [fig](http://www.fig.sh/).
 
 ###Checkout
 
