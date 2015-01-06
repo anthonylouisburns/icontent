@@ -81,3 +81,19 @@ By default the values are as follows
 - https://github.com/anthonylouisburns/icontent/blob/master/notebooks/icontent/css/home.css - default css
 - empty array - default links to include in sidebar
   - format: [["${text}", "${url}", "${css id}"], ...]
+
+####Override
+override values for these three variables can be specified in any markdown cell within a IPython Notebook.
+
+It is permissible to put the settings inside a comment.
+```
+<!---
+template=/notebooks/static/icontent.tpl
+
+css=/css/home.css
+
+sideleft=sideleft.html
+
+links=[["Anthony Louis Burns", "http://www.anthonylouisburns.com", "pad0"], ["IContent", "http://www.anthonylouisburns.com/icontent/IContent.html", "pad0"], ["IContent - github", "https://github.com/anthonylouisburns/icontent/", "pad0"], ["Anthony Louis Burn - LinkedIn", "https://www.linkedin.com/in/anthonylouisburns", "pad0"]]
+--->
+```
