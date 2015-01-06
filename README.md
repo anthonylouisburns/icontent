@@ -44,3 +44,14 @@ $cd icontent/nginxone
 $fig up
 ```
 This is simply running a webserver that serves up the previously generated static content. It is currently configured to serve content at http://localhost/icontent/. This can be easily replaced with a different web server. The generated files are by default static html.
+
+##IContent Application
+Launch IContent Application, generally on dev machine
+```
+$cd icontent
+$fig up
+```
+
+In addition to the nginx server at local host this runs a IPython Notebook server at port 8080
+
+The unique functionality is icontent_convert service
