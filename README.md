@@ -15,8 +15,14 @@ The Project consists of three core Docker services, (icontent_convert, nginxone 
 The Docker services are intended to be launched and orchestrated using fig.
 
 1. scipyserver
+  - host an IPython notebook at [http://localhost:8080]
+  - not incrypted, intended to be run on development machine, not on server
+  - Dockerfile largely based on [https://github.com/ipython/docker-notebook/blob/master/scipyserver/Dockerfile]
 2. icontent_convert
+  - watches notebook directory and runs NBConvert on altered notebooks, generating HTML documents (other document types are possible  
 3. nginxone
+  - serves static files at [http://localhost:80]
 4. dev-tools
 5. notebooks
+  - shared data and generate IPython Notebooks, and generated documents
 
