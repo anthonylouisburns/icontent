@@ -1,4 +1,4 @@
-##IContent
+#IContent
 IContent is intended to allow intuitive and simple generation of Technical and data intensive documents, particularly HTML.
 
 The functionality largely reproduces what is possible with [NBViewer](http://nbviewer.ipython.org/). IContent attempts to make customization of the documents more transparent and excessable than with NBViewer.
@@ -45,7 +45,7 @@ $fig up
 ```
 This is simply running a webserver that serves up the previously generated static content. It is currently configured to serve content at http://localhost/icontent/. This can be easily replaced with a different web server. The generated files are by default static html.
 
-##IContent Application
+#IContent Application
 Launch IContent Application, generally on dev machine
 ```
 $cd icontent
