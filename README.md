@@ -83,7 +83,7 @@ By default the values are as follows
   - format: [["${text}", "${url}", "${css id}"], ...]
 
 ####Override
-override values for these three variables can be specified in any markdown cell within a IPython Notebook.
+override values for these four variables can be specified in any markdown cell within a IPython Notebook.
 
 It is permissible to put the settings inside a comment.
 ```
