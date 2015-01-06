@@ -68,3 +68,8 @@ ipython /notebooks/static/moveFiles.py
 sleep 1
 done
 ```
+
+Whenever any files in the notebooks directory are changed, /notebooks/static/getAltered.py is run and determines what files with the extension .ipynb (IPython Notebooks) have been changed. 
+
+https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/convert_one_file.py is then applied to each changed Notebook.
+
