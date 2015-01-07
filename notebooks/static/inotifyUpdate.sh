@@ -3,10 +3,11 @@
 while true #run indefinitely
 do
 inotifywait -e modify,attrib,close_write,move,create,delete /notebooks
-echo "run"
+echo "ipython /notebooks/static/getAltered.py"
 ipython /notebooks/static/getAltered.py
-echo "move"
+echo "ipython /notebooks/static/moveFiles.py"
 ipython /notebooks/static/moveFiles.py
+echo "finished inotifyUpdate.sh loop"
 sleep 1
 done
 
