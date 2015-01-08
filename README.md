@@ -98,3 +98,32 @@ sideleft=sideleft.html
 links=[["Anthony Louis Burns", "http://www.anthonylouisburns.com", "pad0"], ["IContent", "http://www.anthonylouisburns.com/icontent/IContent.html", "pad0"], ["IContent - github", "https://github.com/anthonylouisburns/icontent/", "pad0"], ["Anthony Louis Burn - LinkedIn", "https://www.linkedin.com/in/anthonylouisburns", "pad0"]]
 --->
 ```
+
+#IContent Convert
+The IContent Convert service runs the following /notebooks/static/inotifyUpdate.sh on startup
+
+This script monitors the /notebooks directory for any change. If it detects a change it runs /notebooks/static/getAltered.py
+
+getAltered.py determines if any files with the .ipynb extension have changed. If a notebook file has changd it than calls  /notebooks/static/convert_one_file.py on each file creating an HTMl file.
+
+inotifyUpdate.sh than runs /notebooks/static/moveFiles.py 
+
+moveFiles.py moves any html documents created to a seperate directory with the same structure as the notebook directory for static serving by the nginxone service.
+
+####convert_one_file.py
+
+This script reads the notebook json and determines if teh config_script has been set in any of the metadata cells.
+
+If it has it than calls nbconvert on the file with the new config script, if not it calls it with the default config script. the default config script is /notebooks/static/config.py
+
+That config script sets the html template to icontent, so this template is used.
+
+It also sets a Preprocessor equal to ['icontent_preprocessor.IContentPreprocessor'] this can be found in this file /notebooks/static/icontent_preprocessor.py
+
+it sets the three following variables to values it finds in the notebooks Markdown cells or to these defaults 
+- resources['css'] = ["/css/home.css"]
+- resources['sideleft'] = "sideleft.html"
+- resources['links'] = [["Anthony Louis Burns", "http://www.anthonylouisburns.com", "pad0"], ["IContent", "http://www.anthonylouisburns.com/icontent/IContent.html", "pad0"], ["IContent - github", "https://github.com/anthonylouisburns/icontent/", "pad0"], ["Anthony Louis Burn - LinkedIn", "https://www.linkedin.com/in/anthonylouisburns", "pad0"]]
+
+These varaibles are than used inside of the templates, teh links variable is used in the sideleft.html template, and css, and sideleft are used in the icontent.tpl
+
