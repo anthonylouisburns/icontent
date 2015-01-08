@@ -89,7 +89,7 @@ override values for these four variables can be specified in any markdown cell w
 It is permissible to put the settings inside a comment.
 ```
 <!---
-template=/notebooks/static/icontent.tpl
+config_script=/notebooks/static/config.py
 
 css=/css/home.css
 
