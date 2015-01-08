@@ -10642,6 +10642,8 @@ div#notebook {
  </div>
 
 <link rel="stylesheet" href="/css/home.css">
+
+
 <div id="sideleft">
     <p id="pad0">
         <a href="/">Anthony Louis Burns  </a>
@@ -10655,17 +10657,8 @@ div#notebook {
     <p id="pad1">
         <a href="/icontent/Brazil.html">Brazil  </a>
     </p>
-    <p id="pad1">
-        <a href="/icontent/Belgium.html">Belguim  </a>
-    </p>
-    <p id="pad1">
-        <a href="/icontent/Bahamas.html">Bahamas  </a>
-    </p>
-    <p id="pad1">
-        <a href="/icontent/obnoxious.html">obnoxious  </a>
-    </p>
     <p id="pad0">
-        <a href="/icontent">IContent - github  </a>
+        <a href="https://github.com/anthonylouisburns/icontent">IContent - github  </a>
     </p>
     <p id="pad0">
         <a href="https://www.linkedin.com/in/anthonylouisburns">Anthony Louis Burn - LinkedIn  </a>
@@ -10687,117 +10680,45 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>The following settings can be set in any Markdown cell in your notebook.</strong></p>
-<p><strong>They can also occur in a Markdown comment. Each setting should be on a seperate line</strong></p>
-<p>template=/notebooks/static/icontent.tpl</p>
-<p>css=/css/home.css</p>
+<p><strong>They can also occur in a Markdown comment. Each setting should be on a seperate line.</strong></p>
+<p><strong>If set more than once, the final occurence will override</strong></p>
+<p>config_script=/notebooks/static/config.py</p>
+<p>css=["/css/home.css"]</p>
 <p>sideleft=sideleft.html</p>
-<p>links=[["Anthony Louis Burns", "/", "pad0"], ["IContent", "/icontent/IContent.html", "pad0"], ["standard", "/icontent/standard.html", "pad1"], ["Brazil", "/icontent/Brazil.html", "pad1"], ["Belguim", "/icontent/Belgium.html", "pad1"], ["Bahamas", "/icontent/Bahamas.html", "pad1"], ["obnoxious", "/icontent/obnoxious.html", "pad1"], ["IContent - github", "/icontent", "pad0"], ["Anthony Louis Burn - LinkedIn", "<a href="https://www.linkedin.com/in/anthonylouisburns">https://www.linkedin.com/in/anthonylouisburns</a>", "pad0"], ["anthonylouisburns@gmail.com", "anthonylouisburns@gmail.com", "pad0"]]</p>
+<p>links=[["Anthony Louis Burns", "/", "pad0"], ["IContent", "/icontent/IContent.html", "pad0"], ["standard", "/icontent/standard.html", "pad1"], ["Brazil", "/icontent/Brazil.html", "pad1"], ["IContent - github", "<a href="https://github.com/anthonylouisburns/icontent">https://github.com/anthonylouisburns/icontent</a>", "pad0"], ["Anthony Louis Burn - LinkedIn", "<a href="https://www.linkedin.com/in/anthonylouisburns">https://www.linkedin.com/in/anthonylouisburns</a>", "pad0"], ["anthonylouisburns@gmail.com", "anthonylouisburns@gmail.com", "pad0"]]</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Markdown</span>
-
-<span class="k">def</span> <span class="nf">code</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">code</span><span class="p">):</span>   
-    <span class="k">return</span> <span class="n">Markdown</span><span class="p">(</span><span class="s">&quot;```&quot;</span><span class="o">+</span><span class="n">code</span><span class="o">+</span><span class="s">&quot; </span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">+</span> <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()))</span> <span class="o">+</span> <span class="s">&quot;```&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For detailed instructions and explanations please see the <a href="https://github.com/anthonylouisburns/icontent">IContent - github</a></p>
+<p>The conversion process is covered in <a href="https://github.com/anthonylouisburns/icontent/blob/master/README.md#icontent-convert">here</a></p>
+<p>The brazil example is covered <a href="https://github.com/anthonylouisburns/icontent/blob/master/README.md#brazil-example">here</a></p>
+<p>The standard example is covered <a href="https://github.com/anthonylouisburns/icontent/blob/master/README.md#standard-example">here</a></p>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">code</span><span class="p">(</span><span class="s">&quot;/notebooks/icontent/css/home.css&quot;</span><span class="p">,</span><span class="s">&quot;css&quot;</span><span class="p">)</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To install or develop IContent please visit <a href="https://github.com/anthonylouisburns/icontent">IContent - github</a></p>
+<ul>
+<li>Examples<ul>
+<li><a href="/icontent/standard.html">standard</a></li>
+<li><a href="/icontent/Brazil.html">Brazil</a></li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;IPython.core.display.Markdown object&gt;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">code</span><span class="p">(</span><span class="s">&quot;/notebooks/static/icontent.tpl&quot;</span><span class="p">,</span><span class="s">&quot;smarty&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;IPython.core.display.Markdown object&gt;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">code</span><span class="p">(</span><span class="s">&quot;/notebooks/static/sideleft.html&quot;</span><span class="p">,</span><span class="s">&quot;html&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;IPython.core.display.Markdown object&gt;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
     </div>
   </div>

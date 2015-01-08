@@ -10,7 +10,10 @@ http://jinja.pocoo.org/docs/dev/api/#basics
 {% block body %}
  </div>
 
-<link rel="stylesheet" href="{{ resources.css }}">
+{% for css in resources.css -%}
+    <link rel="stylesheet" href="{{ css }}">
+{% endfor %}
+
 {% include resources.sideleft ignore missing%}
 <div id="main">
 {{ super() }}

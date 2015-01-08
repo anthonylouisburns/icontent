@@ -10639,6 +10639,7 @@ div#notebook {
     <!-- End of mathjax configuration -->
 
 </head>
+ </div>
 
 <link rel="stylesheet" href="/css/home.css">
 <div id="sideleft">
@@ -10797,6 +10798,41 @@ div#notebook {
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="c"># by default Image data are embedded</span>
+<span class="n">Embed</span>      <span class="o">=</span> <span class="n">Image</span><span class="p">(</span>    <span class="s">&#39;http://scienceview.berkeley.edu/view/images/newview.jpg&#39;</span><span class="p">)</span>
+
+<span class="c"># if kwarg `url` is given, the embedding is assumed to be false</span>
+<span class="n">SoftLinked</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&#39;http://scienceview.berkeley.edu/view/images/newview.jpg&#39;</span><span class="p">)</span>
+
+<span class="c"># In each case, embed can be specified explicitly with the `embed` kwarg</span>
+<span class="c"># ForceEmbed = Image(url=&#39;http://scienceview.berkeley.edu/view/images/newview.jpg&#39;, embed=True)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">Embed</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 

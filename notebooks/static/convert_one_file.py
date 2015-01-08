@@ -34,7 +34,7 @@ def getConfig(nb):
     config_script = "/notebooks/static/config.py"
 
     config_list = [s.partition("=")[2].strip() for s in allsource if s.partition("=")[0] == "config_script"]
-
+    print(config_list)
     if len(config_list)>0: config_script=config_list[-1]
-
+    print(config_script)
     return config_script

@@ -1,0 +1,9 @@
+{
+  "pid": 119,
+  "secure": false,
+  "url": "http://localhost:8080/",
+  "notebook_dir": "/src/nb",
+  "hostname": "localhost",
+  "port": 8080,
+  "base_url": "/"
+}

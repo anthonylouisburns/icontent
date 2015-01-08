@@ -1,5 +1,8 @@
 tools:
   build: .
+  ports:
+  - "8181:8080"
+  - "81:80"
   volumes:
   - ../notebooks/:/notebooks/
   - .:/src/

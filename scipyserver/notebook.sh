@@ -16,4 +16,4 @@ HASH=$(python3 -c "from IPython.lib import passwd; print(passwd('${PASSWORD}'))"
 unset PASSWORD
 
 #ipython2 notebook --no-browser --port 8888 --ip=* --certfile=$PEM_FILE --NotebookApp.password="$HASH"
-ipython2 notebook --no-browser --port 8080 --ip=*
+ipython3 notebook --no-browser --port 8080 --ip=*
