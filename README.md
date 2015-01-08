@@ -148,13 +148,54 @@ for nb in changed_nbs:
     convert_one_file.convert_one(nb)
 ```
 
-getAltered.py determines if any files with the .ipynb extension have changed. If a notebook file has changd it than calls  /notebooks/static/convert_one_file.py on each file creating an HTMl file.
+getAltered.py determines if any files with the .ipynb extension have changed. If a notebook file has changd it than calls  [convert_one_file.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/convert_one_file.py) on each file creating an HTMl file.
+```python
+import subprocess
+import shutil
+import os
+import json
+import itertools
 
+
+def convert_one(notebook):
+
+    with open(notebook) as data_file:
+        data = json.load(data_file)
+
+    script = "ipython nbconvert --config " + getConfig(data) + " " + notebook
+    print(script)
+    subprocess.call(script, shell=True, cwd=r'/notebooks/static')
+
+    html = notebook.replace(".ipynb", ".html").replace("/notebooks/", "/notebooks/static/")
+    html_dest = html.replace("/notebooks/static/", "/notebooks/icontent/")
+
+    if not os.path.exists(os.path.dirname(html_dest)):
+        os.makedirs(os.path.dirname(html_dest))
+
+    #if os.path.exists(html_dest):
+    #    os.remove(html_dest)
+
+    shutil.move(html, html_dest)
+
+
+def getConfig(nb):
+    print('>>>>>>>>>setVariables')
+    sourcelist = [cell["source"] for cell in nb["cells"] if cell["cell_type"] == 'markdown']
+    allsource = list(itertools.chain(*sourcelist))
+
+    config_script = "/notebooks/static/config.py"
+
+    config_list = [s.partition("=")[2].strip() for s in allsource if s.partition("=")[0] == "config_script"]
+
+    if len(config_list)>0: config_script=config_list[-1]
+
+    return config_script
+```
 inotifyUpdate.sh than runs /notebooks/static/moveFiles.py 
 
 moveFiles.py moves any html documents created to a seperate directory with the same structure as the notebook directory for static serving by the nginxone service.
 
-####convert_one_file.py
+####[convert_one_file.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/convert_one_file.py)
 
 This script reads the notebook json and determines if the config_script has been set in any of the metadata cells.
 
