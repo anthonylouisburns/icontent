@@ -87,7 +87,7 @@ By default the values are as follows
 override values for these four variables can be specified in any markdown cell within a IPython Notebook.
 
 It is permissible to put the settings inside a comment.
-```markdown
+```
 <!---
 config_script=/notebooks/static/config.py
 
@@ -100,7 +100,7 @@ links=[["Anthony Louis Burns", "http://www.anthonylouisburns.com", "pad0"], ["IC
 ```
 
 #IContent Convert
-The IContent Convert service runs the following /notebooks/static/inotifyUpdate.sh on startup
+The IContent Convert service runs the following [inotifyUpdate.sh](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/inotifyUpdate.sh) on startup
 
 This script monitors the /notebooks directory for any change. If it detects a change it runs /notebooks/static/getAltered.py
 
