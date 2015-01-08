@@ -127,3 +127,8 @@ It sets the three following variables to values it finds in the notebooks Markdo
 
 These varaibles are than used inside of the templates, the links variable is used in the sideleft.html template, and css, and sideleft are used in the icontent.tpl
 
+####Brazil example
+The Brazil example overrides the config.py with the brazil.py script, and adds and additonal brazil.css style sheet which themes the colors to those of the Brazilian flag.
+
+brazil.py changes the template to brazil.tpl, brazil.tpl adds a Brazil header
+
