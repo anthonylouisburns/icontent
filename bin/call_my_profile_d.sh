@@ -1,0 +1,1 @@
+. /vagrant/bin/my_profile_d.sh
