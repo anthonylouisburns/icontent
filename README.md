@@ -31,18 +31,26 @@ The Docker services are intended to be launched and orchestrated using [fig](htt
 Clone Project
 ```
 $git clone https://github.com/anthonylouisburns/icontent.git
+
+$cd icontent
+```
+If you are using Vagrant
+```
+vagrant up
+vagrant ssh
+cd /vagrant
 ```
 
 Launch IContent Application, generally on dev machine
 ```
-$cd icontent
-$fig up
+$cd icontent (/vagrant)
+$fig up -d
 ```
 
 Launch nginx
 ```
-$cd icontent/nginxone
-$fig up
+$cd nginxone (/vagrant/gninxone)
+$fig up -d
 ```
 This is simply running a webserver that serves up the previously generated static content. It is currently configured to serve content at http://localhost/icontent/. This can be easily replaced with a different web server. The generated files are by default static html.
 
