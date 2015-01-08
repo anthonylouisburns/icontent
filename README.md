@@ -245,11 +245,145 @@ It sets the three following variables to values it finds in the notebooks Markdo
 These varaibles are than used inside of the templates, the links variable is used in the sideleft.html template, and css, and sideleft are used in the icontent.tpl
 
 ####Brazil example
-The Brazil example overrides the config.py with the brazil.py script, and adds and additonal brazil.css style sheet which themes the colors to those of the Brazilian flag.
+The Brazil example overrides the [config.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/config.py) with the [brazil.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/brazil.py) script
+```python
+c = get_config()
 
+#Export all the notebooks in the current directory to the sphinx_howto format.
+c.Exporter.template_file = 'brazil'
+c.Exporter.preprocessors = ['icontent_preprocessor.IContentPreprocessor', 'icontent_preprocessor.ExclamationPreprocessor']
+```
+[brazil.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/brazil.py) and adds an additonal brazil.css style sheet which themes the colors to those of the Brazilian flag.
+```css
+#sideleft {
+    background-color: #FCFC08;
+}
+body{
+    background-color: #416CB1;
+}
+#notebook-container{
+    background-color: #135728;
+}
+#sideleft a {
+    color: #135728;
+}
+div.text_cell_render {
+    color: #FCFC08;
+}
+#headerbox {
+    background-color: #FCFC08;
+    color: #135728;
+}
+```
 brazil.py changes the template to brazil.tpl, brazil.tpl adds a Brazil header
+```smarty
+{#
+i found this very useful
+https://realpython.com/blog/python/primer-on-jinja-templating/
 
+these templates are jinja templates
+http://jinja.pocoo.org/docs/dev/api/#basics
+#}
+
+{%- extends 'full.tpl' -%}
+{% block body %}
+ </div>
+{% for css in resources.css -%}
+    <link rel="stylesheet" href="{{ css }}">
+{% endfor %}
+<div id="headerbox">
+    <h1>BRAZIL</h1>
+</div>
+{% include resources.sideleft ignore missing%}
+<div id="main">
+{{ super() }}
+</div>
+{%- endblock body %}
+```
 ####Standard example
-icontent.html
+[icontent.tpl]()
+```smarty
+{#
+i found this very useful
+https://realpython.com/blog/python/primer-on-jinja-templating/
+
+these templates are jinja templates
+http://jinja.pocoo.org/docs/dev/api/#basics
+#}
+
+{%- extends 'full.tpl' -%}
+{% block body %}
+ </div>
+
+{% for css in resources.css -%}
+    <link rel="stylesheet" href="{{ css }}">
+{% endfor %}
+
+{% include resources.sideleft ignore missing%}
+<div id="main">
+{{ super() }}
+</div>
+{%- endblock body %}
+```
 sideleft.html
-home.css
+```smarty
+<div id="sideleft">
+    {% for link in resources.links -%}
+    <p id="{{ link.2 }}">
+        <a href="{{ link.1 }}">{{ link.0 }}  </a>
+    </p>
+    {% endfor %}
+</div>
+```
+[/icontent/blob/master/notebooks/static/home.css]
+```css
+#sideleft {
+    float: left;
+    width: 15%;
+    min-height: 100%;
+    text-align: left;
+    padding:30px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 0px 12px 5px rgba(87, 87, 87, 0.2);
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+#main
+{
+    float: right;
+    text-align: left;
+    width: 70%;
+    margin-right: 15%;
+}
+#pad0
+{
+    padding: 10px;
+}
+#pad1
+{
+    text-indent: 20px;
+}
+body{
+}
+#notebook-container{
+}
+#sideleft a {
+    text-decoration: underline;
+}
+div.text_cell_render {
+
+}
+#headerbox {
+    float: left;
+    width: 100%;
+    min-height: 5%;
+    text-align: center;
+    padding:30px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 0px 12px 5px rgba(87, 87, 87, 0.2);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+```
