@@ -149,6 +149,36 @@ for nb in changed_nbs:
 ```
 
 getAltered.py determines if any files with the .ipynb extension have changed. If a notebook file has changd it than calls  [convert_one_file.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/convert_one_file.py) on each file creating an HTMl file.
+
+inotifyUpdate.sh than runs [moveFiles.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/moveFiles.py)
+```python
+import glob
+import shutil
+import os
+
+
+def new_dir(dir):
+    if not os.path.exists(dir):
+        os.makedirs(dir)
+
+
+pyFiles = glob.glob("*.ipynb") + glob.glob("**/*.ipynb") + glob.glob("**/**/*.ipynb")
+print(pyFiles)
+for p in pyFiles:
+    lastDash = p.rfind("/")+1
+    pyDir = p[:lastDash]
+    pyFile = p[lastDash:]
+    htmlFile = pyFile.replace("ipynb", "html")
+    htmlDir = "html/"+pyDir
+    new_dir(htmlDir)
+    if os.path.exists(htmlFile):
+        shutil.move(htmlFile, htmlDir + htmlFile)
+        print("moving:", htmlFile, htmlDir)
+```
+
+moveFiles.py moves any html documents created to a seperate directory with the same structure as the notebook directory for static serving by the nginxone service.
+
+####[convert_one_file.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/convert_one_file.py)
 ```python
 import subprocess
 import shutil
@@ -191,11 +221,6 @@ def getConfig(nb):
 
     return config_script
 ```
-inotifyUpdate.sh than runs /notebooks/static/moveFiles.py 
-
-moveFiles.py moves any html documents created to a seperate directory with the same structure as the notebook directory for static serving by the nginxone service.
-
-####[convert_one_file.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/convert_one_file.py)
 
 This script reads the notebook json and determines if the config_script has been set in any of the metadata cells.
 
