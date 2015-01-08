@@ -112,7 +112,7 @@ moveFiles.py moves any html documents created to a seperate directory with the s
 
 ####convert_one_file.py
 
-This script reads the notebook json and determines if teh config_script has been set in any of the metadata cells.
+This script reads the notebook json and determines if the config_script has been set in any of the metadata cells.
 
 If it has it than calls nbconvert on the file with the new config script, if not it calls it with the default config script. the default config script is /notebooks/static/config.py
 
