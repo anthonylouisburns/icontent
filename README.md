@@ -148,7 +148,7 @@ for nb in changed_nbs:
     convert_one_file.convert_one(nb)
 ```
 
-getAltered.py determines if any files with the .ipynb extension have changed. If a notebook file has changd it than calls  [convert_one_file.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/convert_one_file.py) on each file creating an HTMl file.
+[getAltered.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/getAltered.py) determines if any files with the .ipynb extension have changed. If a notebook file has changd it than calls  [convert_one_file.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/convert_one_file.py) on each file creating an HTMl file.
 
 inotifyUpdate.sh than runs [moveFiles.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/moveFiles.py)
 ```python
@@ -176,7 +176,7 @@ for p in pyFiles:
         print("moving:", htmlFile, htmlDir)
 ```
 
-moveFiles.py moves any html documents created to a seperate directory with the same structure as the notebook directory for static serving by the nginxone service.
+[moveFiles.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/moveFiles.py) moves any html documents created to a seperate directory with the same structure as the notebook directory for static serving by the nginxone service.
 
 ####[convert_one_file.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/convert_one_file.py)
 ```python
