@@ -102,6 +102,20 @@ links=[["Anthony Louis Burns", "http://www.anthonylouisburns.com", "pad0"], ["IC
 #IContent Convert
 The IContent Convert service runs the following [inotifyUpdate.sh](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/inotifyUpdate.sh) on startup
 
+```bash
+#!/bin/bash
+
+while true #run indefinitely
+do
+inotifywait -e modify,attrib,close_write,move,create,delete /notebooks
+echo "ipython /notebooks/static/getAltered.py"
+ipython /notebooks/static/getAltered.py
+echo "ipython /notebooks/static/moveFiles.py"
+ipython /notebooks/static/moveFiles.py
+echo "finished inotifyUpdate.sh loop"
+sleep 1
+done
+```
 This script monitors the /notebooks directory for any change. If it detects a change it runs /notebooks/static/getAltered.py
 
 getAltered.py determines if any files with the .ipynb extension have changed. If a notebook file has changd it than calls  /notebooks/static/convert_one_file.py on each file creating an HTMl file.
