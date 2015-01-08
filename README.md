@@ -275,7 +275,7 @@ div.text_cell_render {
     color: #135728;
 }
 ```
-brazil.py changes the template to brazil.tpl, brazil.tpl adds a Brazil header
+[brazil.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/brazil.py) changes the template to brazil.tpl, [brazil.tpl](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/brazil.tpl) adds a Brazil header
 ```smarty
 {#
 i found this very useful
@@ -301,7 +301,7 @@ http://jinja.pocoo.org/docs/dev/api/#basics
 {%- endblock body %}
 ```
 ####Standard example
-[icontent.tpl]()
+[icontent.tpl](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/icontent.tpl)
 ```smarty
 {#
 i found this very useful
@@ -325,7 +325,7 @@ http://jinja.pocoo.org/docs/dev/api/#basics
 </div>
 {%- endblock body %}
 ```
-sideleft.html
+[sideleft.html](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/sideleft.html)
 ```smarty
 <div id="sideleft">
     {% for link in resources.links -%}
@@ -335,7 +335,7 @@ sideleft.html
     {% endfor %}
 </div>
 ```
-(/icontent/blob/master/notebooks/static/home.css)
+[home.css](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/incontent/home.css)
 ```css
 #sideleft {
     float: left;
