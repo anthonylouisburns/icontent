@@ -36,9 +36,9 @@ $cd icontent
 ```
 If you are using Vagrant
 ```
-vagrant up
-vagrant ssh
-cd /vagrant
+$vagrant up
+$vagrant ssh
+$cd /vagrant
 ```
 
 Launch IContent Application, generally on dev machine
