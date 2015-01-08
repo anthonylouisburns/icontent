@@ -120,10 +120,10 @@ That config script sets the html template to icontent, so this template is used.
 
 It also sets a Preprocessor equal to ['icontent_preprocessor.IContentPreprocessor'] this can be found in this file /notebooks/static/icontent_preprocessor.py
 
-it sets the three following variables to values it finds in the notebooks Markdown cells or to these defaults 
+It sets the three following variables to values it finds in the notebooks Markdown cells or to these defaults 
 - resources['css'] = ["/css/home.css"]
 - resources['sideleft'] = "sideleft.html"
 - resources['links'] = [["Anthony Louis Burns", "http://www.anthonylouisburns.com", "pad0"], ["IContent", "http://www.anthonylouisburns.com/icontent/IContent.html", "pad0"], ["IContent - github", "https://github.com/anthonylouisburns/icontent/", "pad0"], ["Anthony Louis Burn - LinkedIn", "https://www.linkedin.com/in/anthonylouisburns", "pad0"]]
 
-These varaibles are than used inside of the templates, teh links variable is used in the sideleft.html template, and css, and sideleft are used in the icontent.tpl
+These varaibles are than used inside of the templates, the links variable is used in the sideleft.html template, and css, and sideleft are used in the icontent.tpl
 
