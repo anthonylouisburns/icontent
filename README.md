@@ -87,7 +87,7 @@ By default the values are as follows
 override values for these four variables can be specified in any markdown cell within a IPython Notebook.
 
 It is permissible to put the settings inside a comment.
-```
+```markdown
 <!---
 config_script=/notebooks/static/config.py
 
