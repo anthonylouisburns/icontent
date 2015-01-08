@@ -150,7 +150,7 @@ for nb in changed_nbs:
 
 [getAltered.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/getAltered.py) determines if any files with the .ipynb extension have changed. If a notebook file has changd it than calls  [convert_one_file.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/convert_one_file.py) on each file creating an HTMl file.
 
-inotifyUpdate.sh than runs [moveFiles.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/moveFiles.py)
+[inotifyUpdate.sh](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/inotifyUpdate.sh) than runs [moveFiles.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/moveFiles.py)
 ```python
 import glob
 import shutil
@@ -224,11 +224,18 @@ def getConfig(nb):
 
 This script reads the notebook json and determines if the config_script has been set in any of the metadata cells.
 
-If it has it than calls nbconvert on the file with the new config script, if not it calls it with the default config script. the default config script is /notebooks/static/config.py
+If it has it than calls nbconvert on the file with the new config script, if not it calls it with the default config script. the default config script is [config.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/config.py)
+```python
+c = get_config()
 
-That config script sets the html template to icontent, so this template is used.
 
-It also sets a Preprocessor equal to ['icontent_preprocessor.IContentPreprocessor'] this can be found in this file /notebooks/static/icontent_preprocessor.py
+#Export all the notebooks in the current directory to the sphinx_howto format.
+c.Exporter.template_file = 'icontent'
+c.Exporter.preprocessors = ['icontent_preprocessor.IContentPreprocessor']
+```
+That config script sets the html template to icontent, so [icontent.tpl](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/icontent.tpl) is used.
+
+It also sets a Preprocessor equal to icontent_preprocessor.IContentPreprocessor this can be found in this file [icontent_preprocessor.py](https://github.com/anthonylouisburns/icontent/blob/master/notebooks/static/icontent_preprocessor.py)
 
 It sets the three following variables to values it finds in the notebooks Markdown cells or to these defaults 
 - resources['css'] = ["/css/home.css"]
@@ -242,3 +249,7 @@ The Brazil example overrides the config.py with the brazil.py script, and adds a
 
 brazil.py changes the template to brazil.tpl, brazil.tpl adds a Brazil header
 
+####Standard example
+icontent.html
+sideleft.html
+home.css
