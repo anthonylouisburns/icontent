@@ -335,7 +335,7 @@ sideleft.html
     {% endfor %}
 </div>
 ```
-[/icontent/blob/master/notebooks/static/home.css]
+(/icontent/blob/master/notebooks/static/home.css)
 ```css
 #sideleft {
     float: left;
