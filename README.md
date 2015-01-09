@@ -1,4 +1,6 @@
 #IContent
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/anthonylouisburns/icontent?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 IContent is intended to allow intuitive and simple generation of Technical and data intensive documents, particularly HTML.
 
 The functionality largely reproduces what is possible with [NBViewer](http://nbviewer.ipython.org/). IContent attempts to make customization of the documents more transparent and excessable than with NBViewer.
