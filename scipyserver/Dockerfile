@@ -12,7 +12,7 @@ ENV PEM_FILE /key.pem
 # $PASSWORD will get `unset` within notebook.sh, turned into an IPython style hash
 ENV PASSWORD Dont make this your default
 
-ADD /scipyserver/notebook.sh /
+ADD scipyserver/notebook.sh /
 RUN chmod u+x /notebook.sh
 RUN pip install xlrd
 
