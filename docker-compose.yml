@@ -1,18 +1,16 @@
 ipy:
-  build: scipyserver
+  image: 'tutum.co/burnstony/scipyserver:latest'
   ports:
-  - "8080:8080"
-  volumes:
-  - notebooks/:/notebooks/
+    - '8080:8080'
+  volumes_from:
+    - data_data_1
 converted:
-  build: icontent_convert
+  image: 'tutum.co/burnstony/icontent_convert:latest'
   volumes_from:
-  - ipy
+    - data_data_1
 nginxone:
-  build: nginxone
+  image: 'tutum.co/burnstony/nginxone:latest'
   ports:
-  - "80:80"
+    - '80:80'
   volumes_from:
-  - ipy
-  volumes:
-  - nginxone/etc/nginx/:/etc/nginx/
+    - data_data_1

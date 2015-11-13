@@ -2,9 +2,7 @@ FROM ipython/scipystack
 
 MAINTAINER IPython Project <ipython-dev@scipy.org>
 
-VOLUME /notebooks
 WORKDIR /notebooks
-
 EXPOSE 8080
 
 # You can mount your own SSL certs as necessary here
@@ -15,5 +13,5 @@ ENV PASSWORD Dont make this your default
 ADD notebook.sh /
 RUN chmod u+x /notebook.sh
 RUN pip install xlrd
-
+RUN chmod -R 700 /notebooks
 CMD ["/notebook.sh"]

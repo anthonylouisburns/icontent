@@ -1,0 +1,19 @@
+#sideleft {
+    background-color: #FCFC08;
+}
+body{
+    background-color: #416CB1;
+}
+#notebook-container{
+    background-color: #135728;
+}
+#sideleft a {
+    color: #135728;
+}
+div.text_cell_render {
+    color: #FCFC08;
+}
+#headerbox {
+    background-color: #FCFC08;
+    color: #135728;
+}

@@ -1,0 +1,7 @@
+<div id="sideleft">
+    {% for link in resources.links -%}
+    <p id="{{ link.2 }}">
+        <a href="{{ link.1 }}">{{ link.0 }}  </a>
+    </p>
+    {% endfor %}
+</div>
