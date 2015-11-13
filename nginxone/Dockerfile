@@ -1,2 +1,2 @@
 FROM nginx
-VOLUME /etc/nginx/
+ADD etc/nginx/ /etc/nginx/
