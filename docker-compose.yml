@@ -1,16 +1,18 @@
+data:
+  image 'burnstony/icontent.data:latest'
 ipy:
-  image: 'tutum.co/burnstony/scipyserver:latest'
+  image: 'burnstony/scipyserver:latest'
   ports:
     - '8080:8080'
   volumes_from:
-    - data_data_1
+    - data
 converted:
-  image: 'tutum.co/burnstony/icontent_convert:latest'
+  image: 'burnstony/icontent_convert:latest'
   volumes_from:
-    - data_data_1
+    - data
 nginxone:
-  image: 'tutum.co/burnstony/nginxone:latest'
+  image: 'burnstony/nginxone:latest'
   ports:
     - '80:80'
   volumes_from:
-    - data_data_1
+    - data
