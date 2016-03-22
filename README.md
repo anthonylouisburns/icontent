@@ -1,5 +1,5 @@
 #IContent
-[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/anthonylouisburns/icontent?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 IContent is intended to allow intuitive and simple generation of Technical and data intensive documents, particularly HTML.
 
