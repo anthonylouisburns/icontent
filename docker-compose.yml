@@ -6,13 +6,30 @@ ipy:
     - '8080:8080'
   volumes_from:
     - data
+  labels:
+  - "logio=yes"
 converted:
   image: 'burnstony/convert:latest'
   volumes_from:
     - data
+  labels:
+  - "logio=yes"
 nginxone:
   image: 'burnstony/nginxone:latest'
   ports:
     - '80:80'
   volumes_from:
     - data
+  labels:
+  - "logio=yes"
+logio:
+  image: geniousphp/logio
+  volumes:
+  - /var/run/docker.sock:/var/run/docker.sock
+  ports:
+  - "28778:28778"
+  privileged: true
+  environment: #All these env variables are optionals
+  - PORT=28778
+  - DOCKER_SOCKET=/var/run/docker.sock 
+  - SHOW_LOG_BY_LABEL=logio
