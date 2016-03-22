@@ -1,5 +1,5 @@
 data:
-  image 'burnstony/icontent.data:latest'
+  image: 'burnstony/icontent.data:latest'
 ipy:
   image: 'burnstony/scipyserver:latest'
   ports:
