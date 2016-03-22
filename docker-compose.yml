@@ -7,7 +7,7 @@ ipy:
   volumes_from:
     - data
 converted:
-  image: 'burnstony/icontent_convert:latest'
+  image: 'burnstony/convert:latest'
   volumes_from:
     - data
 nginxone:
